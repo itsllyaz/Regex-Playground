@@ -5,6 +5,7 @@ import { RegexEditor } from "@/components/regex-editor"
 import { TestArea } from "@/components/test-area"
 import { ExplanationPanel } from "@/components/explanation-panel"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { AIChat } from "@/components/ai-chat"
 import { findMatches, explainRegex, validateRegex } from "@/lib/regex-utils"
 import { Code2 } from "lucide-react"
 
@@ -104,6 +105,13 @@ export function RegexPlayground() {
           </div>
         </div>
       </main>
+
+      {/* AI Chat */}
+      <AIChat
+        currentPattern={pattern}
+        currentFlags={flags}
+        testString={text}
+      />
     </div>
   )
 }
